@@ -2,13 +2,13 @@ from dataclasses import dataclass
 
 @dataclass
 class Data:
-    dia: int
-    mes: int
-    ano: int
+    dia: int = int(input("dia de nascimento: "))
+    mes: int = int(input("mes de nascimento: "))
+    ano: int = int(input("ano de nascimento: "))
+
 
 @dataclass
 class Estudante:
-    nome: str # Com no mínimo, nome e sobrenome
-    matricula: str
-    data_nascimento: Data
-
+    nome: str = str(input("nome e sobrenome: "))
+    matricula: str = int(input("matricula: "))
+    data_nascimento: Data = f"{Data.dia}/{Data.mes}/{Data.ano}"
